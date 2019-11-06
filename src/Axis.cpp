@@ -26,15 +26,15 @@ window_width(window_width)
     // Variables to help with tick positioning
     float tickLen = 5; // length of ticks
     float xLen = (window_width - 10) - 10, // Length of x Spine
-          yLen = (window_height - 10) - 10, // Length of y Spine
-          dx = xLen/num_divisions + 1, // Ammout of space between each x tick
-          dy = yLen/num_divisions + 1, // Ammout of space between each y tick
+          yLen = 10 - (window_height - 10), // Length of y Spine
+          dx = xLen/num_divisions, // Ammout of space between each x tick
+          dy = yLen/num_divisions, // Ammout of space between each y tick
           currX = 10, currY = window_height - 10; // Current x and y of xtick and ytick being created
 
     for(int i = 0; i < num_divisions; i++)
     {
         xticks[i] = Line(currX, window_height - 10, currX, window_height - 10 + tickLen);
-        yticks[i] = Line(10, currY, 10 - tickLen, currY);
+        yticks[i] = Line(10 - tickLen, currY, 10, currY);
         currX += dx;
         currY += dy;
     }
