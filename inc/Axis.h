@@ -20,8 +20,8 @@ public:
 
     Line getXaxisSpine();
     Line getYaxisSpine();
-    Line* xticks();
-    Line* yticks();
+    Line* getXticks();
+    Line* getYticks();
 
 private:
     float xstart;

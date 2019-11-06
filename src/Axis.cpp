@@ -20,6 +20,21 @@ window_width(window_width)
 
     xticks = new Line[num_divisions];
     yticks = new Line[num_divisions];
+
+    float tickSize = 10;
+    float xLen = xstop - xstart,
+          yLen = ystop - ystart,
+          dx = xLen/num_divisions,
+          dy = yLen/num_divisions,
+          currX = xstart, currY = ystart;
+
+    for(int i = 0; i < num_divisions; i++)
+    {
+        xticks[i] = Line(currX, window_height - 10, currX, window_height - 10 + tickSize);
+        yticks[i] = Line(10, currY, 10 - tickSize, currY);
+        currX += dx;
+        currY += dy;
+    }
 }
 
 Axis::~Axis()
@@ -63,12 +78,12 @@ Line Axis::getYaxisSpine()
 }
 
 
-Line* xticks()
+Line* Axis::getXticks()
 {
-
+    return xticks;
 }
 
-Line* yticks()
+Line* Axis::getYticks()
 {
-
+    return yticks;
 }
