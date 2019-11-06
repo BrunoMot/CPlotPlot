@@ -1,0 +1,11 @@
+# Binaries
+test
+main
+*.exe
+
+# Text files
+log.md
+
+# Obj
+*.o
+*.obj
