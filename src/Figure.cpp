@@ -43,8 +43,14 @@ void Figure::plot()
             }
         }
         window.clear(sf::Color::White);
+        // Draw spines
         window.draw(ax.getXaxisSpine().getLine());
         window.draw(ax.getYaxisSpine().getLine());
+        // Draw ticks
+        for (int i = 0; i < num_divisions; i++){
+            window.draw(ax.getXticks()[i].getLine());
+            window.draw(ax.getYticks()[i].getLine());
+        }
         window.display();
 
     }
