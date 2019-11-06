@@ -76,6 +76,10 @@ void Line::setEndPoint(sf::Vector2f endPoint)
 
 void Line::setLine()
 {
+    // Vectors that save the points offset from the start and end point of the line to 
+    // give it some thickness
+    // p == "positive", an offset in the positive direction
+    // n == "negative", an offset in the negative direction
     sf::Vector2f startdxp = sf::Vector2f(startPoint.x + thickness, startPoint.y);
     sf::Vector2f startdxn = sf::Vector2f(startPoint.x - thickness, startPoint.y);
     sf::Vector2f startdyp = sf::Vector2f(startPoint.x, startPoint.y  + thickness);

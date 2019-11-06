@@ -3,7 +3,7 @@
 
 int main()
 {
-    Figure f = Figure(1, 1, 1, 1, 10);
+    Figure f = Figure(1, 1, 1, 1, 10, "Figura");
 
     f.plot();
 
