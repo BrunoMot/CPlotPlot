@@ -61,3 +61,12 @@ Line Axis::getYaxisSpine()
 }
 
 
+Line* xticks()
+{
+    
+}
+
+Line* yticks()
+{
+
+}
