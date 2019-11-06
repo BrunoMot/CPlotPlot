@@ -18,6 +18,8 @@ window_width(window_width)
     xaxis_spine = Line(10, window_height - 10, window_width - 10, window_height - 10);
     yaxis_spine = Line(10, window_height - 10, 10, 10);
 
+    xticks = new Line[num_divisions];
+    yticks = new Line[num_divisions];
 }
 
 Axis::~Axis()
@@ -63,7 +65,7 @@ Line Axis::getYaxisSpine()
 
 Line* xticks()
 {
-    
+
 }
 
 Line* yticks()
